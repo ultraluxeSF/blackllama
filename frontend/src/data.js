@@ -1,9 +1,9 @@
 const data = {
-    products: [
+    tshirts: [
         {
             _id:'1',
             name:'Electricity Will Kill You Kids',
-            category:'T-shirts',
+            category:'T-shirt',
             image:'https://res.cloudinary.com/teepublic/image/private/s--H_2r7f_c--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_470/c_crop,g_north_west,h_626,w_470,x_0,y_0/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-395,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1636700721/production/designs/25517406_0.jpg',
             price:"$12.99",
             designer:'mistergongs',
@@ -12,7 +12,7 @@ const data = {
         {
             _id:'2',
             name:'Minecraft Impossible River 2',
-            category:'T-shirts',
+            category:'T-shirt',
             image:'https://res.cloudinary.com/teepublic/image/private/s--fdI7fd6k--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_409/c_crop,g_north_west,h_626,w_470,x_-31,y_-26/g_north_west,u_upload:v1571669491:production:blanks:wrrzmmnvfbf1nk8hcfhh,x_-426,y_-351/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1596269139/production/designs/12694562_0.jpg',
             price:"$9.99",
             designer:'Ultraluxe',
@@ -21,7 +21,7 @@ const data = {
         {
             _id:'3',
             name:'Minecraft Impossible River 3',
-            category:'T-shirts',
+            category:'T-shirt',
             image:'https://res.cloudinary.com/teepublic/image/private/s--fdI7fd6k--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_409/c_crop,g_north_west,h_626,w_470,x_-31,y_-26/g_north_west,u_upload:v1571669491:production:blanks:wrrzmmnvfbf1nk8hcfhh,x_-426,y_-351/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1596269139/production/designs/12694562_0.jpg',
             price:"$10.99",
             designer:'Ultraluxe',
@@ -30,7 +30,7 @@ const data = {
         {
             _id:'4',
             name:'Minecraft Impossible River 4',
-            category:'T-shirts',
+            category:'T-shirt',
             image:'https://res.cloudinary.com/teepublic/image/private/s--fdI7fd6k--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_409/c_crop,g_north_west,h_626,w_470,x_-31,y_-26/g_north_west,u_upload:v1571669491:production:blanks:wrrzmmnvfbf1nk8hcfhh,x_-426,y_-351/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1596269139/production/designs/12694562_0.jpg',
             price:"$9.99",
             designer:'Ultraluxe',
@@ -39,40 +39,63 @@ const data = {
         {
             _id:'5',
             name:'Minecraft Impossible River 5',
-            category:'T-shirts',
+            category:'T-shirt',
             image:'https://res.cloudinary.com/teepublic/image/private/s--fdI7fd6k--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_409/c_crop,g_north_west,h_626,w_470,x_-31,y_-26/g_north_west,u_upload:v1571669491:production:blanks:wrrzmmnvfbf1nk8hcfhh,x_-426,y_-351/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1596269139/production/designs/12694562_0.jpg',
             price:"$9.99",
             designer:'Ultraluxe',
             description:'TestDescription',
         },
+        
+    ],
+    hoodies: [
         {
             _id:'6',
-            name:'Minecraft Impossible River 6',
-            category:'T-shirts',
-            image:'https://res.cloudinary.com/teepublic/image/private/s--fdI7fd6k--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_409/c_crop,g_north_west,h_626,w_470,x_-31,y_-26/g_north_west,u_upload:v1571669491:production:blanks:wrrzmmnvfbf1nk8hcfhh,x_-426,y_-351/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1596269139/production/designs/12694562_0.jpg',
-            price:"$11.99",
-            designer:'Ultraluxe',
+            name:'Four Horses of the Nostalgialypse Hoodie',
+            category:'Hoodie',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--ksrNH-Ik--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_433/c_crop,g_north_west,h_579,w_433,x_0,y_0/g_north_west,u_upload:v1446840644:production:blanks:mhmk8aeotz5zq34po3q7,x_-419,y_-300/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1455694558/production/designs/423148_1.jpg',
+            price:"$13.99",
+            designer:'Killskerry',
             description:'TestDescription',
         },
         {
             _id:'7',
-            name:'Minecraft Impossible River 7',
-            category:'T-shirts',
-            image:'https://res.cloudinary.com/teepublic/image/private/s--fdI7fd6k--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_409/c_crop,g_north_west,h_626,w_470,x_-31,y_-26/g_north_west,u_upload:v1571669491:production:blanks:wrrzmmnvfbf1nk8hcfhh,x_-426,y_-351/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1596269139/production/designs/12694562_0.jpg',
-            price:"$8.99",
-            designer:'Ultraluxe',
+            name:'JDM Subie Impreza WRX Bugeye 2000 Hoodie',
+            category:'Hoodie',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--ewN6C8lY--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_433/c_crop,g_north_west,h_579,w_433,x_0,y_0/g_north_west,u_upload:v1446840644:production:blanks:mhmk8aeotz5zq34po3q7,x_-419,y_-300/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1615366594/production/designs/20091837_0.jpg',
+            price:"$14.99",
+            designer:'Guyvit',
             description:'TestDescription',
         },
         {
             _id:'8',
-            name:'Minecraft Impossible River 8',
-            category:'T-shirts',
-            image:'https://res.cloudinary.com/teepublic/image/private/s--fdI7fd6k--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_409/c_crop,g_north_west,h_626,w_470,x_-31,y_-26/g_north_west,u_upload:v1571669491:production:blanks:wrrzmmnvfbf1nk8hcfhh,x_-426,y_-351/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1596269139/production/designs/12694562_0.jpg',
-            price:"$8.99",
-            designer:'Ultraluxe',
+            name:'Gojira Attack Hoodie',
+            category:'Hoodie',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--1TB-4HqP--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_465/c_crop,g_north_west,h_620,w_465,x_0,y_0/g_north_west,u_upload:v1446840653:production:blanks:f6q1psnlmvhpoighmph1,x_-391,y_-276/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1555410318/production/designs/4650079_0.jpg',
+            price:"$14.99",
+            designer:'DrMonekers',
+            description:'TestDescription',
+        },
+        {
+            _id:'9',
+            name:'Citation Needed Hoodie',
+            category:'Hoodie',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--aBbSTqxw--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_465/c_crop,g_north_west,h_620,w_465,x_0,y_-68/g_north_west,u_upload:v1446840660:production:blanks:rf3xfk732ubar7pcccus,x_-391,y_-344/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1629578503/production/designs/23829863_0.jpg',
+            price:"$13.99",
+            designer:'Maintenance Phase',
+            description:'TestDescription',
+        },
+        {
+            _id:'10',
+            name:'Redorss Hoodie',
+            category:'Hoodie',
+            image:'https://res.cloudinary.com/teepublic/image/private/s--d5Q7Xz8A--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_465/c_crop,g_north_west,h_620,w_465,x_0,y_0/g_north_west,u_upload:v1446840652:production:blanks:ymwlojdlb9pdlxgcmck4,x_-391,y_-276/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1628905184/production/designs/23669975_0.jpg',
+            price:"$15.99",
+            designer:'Liamlefr',
             description:'TestDescription',
         },
     ],
 };
+
+
 
 export default data;

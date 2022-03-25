@@ -13,11 +13,12 @@ export default function Product(props) {
             <figcaption className="deal-caption">{product.name}</figcaption>
             <figcaption className="price">{product.price}</figcaption>
             
-            <figcaption className="author"><span className="designerspan">Designer: </span><a href={`/product/${product.designer}`} className="designer">{product.designer}
+            <figcaption className="author"><span className="designerspan">Designer: </span><a href={`/user/${product.designer}`} className="designer">{product.designer}
             </a></figcaption>
             
           </td>
           </a>
         </tr>
+        
   );
 }
