@@ -9,18 +9,18 @@ export default function HomeScreen() {
   return (  
       <div>
             <section className="sec1">
-        <a href="#"><button className="bigbutton">All Designs</button></a>
-        <a href="#"><button className="bigbutton">T-Shirts</button></a>
-        <a href="#"><button className="bigbutton">Hoodies</button></a>
-        <a href="#"><button className="bigbutton">Phone Cases</button></a>
-        <a href="#"><button className="bigbutton">Stickers</button></a>
-        <a href="#"><button className="bigbutton">Posters</button></a>
-        <a href="#"><button className="bigbutton">Home Goods</button></a>
+        <a href="#" className='catlinks'>All Designs</a>
+        <a href="#" className='catlinks'>T-Shirts</a>
+        <a href="#" className='catlinks'>Hoodies</a>
+        <a href="#" className='catlinks'>Phone Cases</a>
+        <a href="#" className='catlinks'>Stickers</a>
+        <a href="#" className='catlinks'>Posters</a>
+        <a href="#" className='catlinks'>Home Goods</a>
         </section>
         <section id="banner">
         <div className="banner-container">
             <figure className="slide">
-            <img src="https://images.pexels.com/photos/3311533/pexels-photo-3311533.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></img>
+            <img src='https://i.imgur.com/w8VkWlg.jpg'/>
             </figure>
         </div>
         </section>
@@ -43,6 +43,34 @@ export default function HomeScreen() {
         <a href={`/category/hoodies`} className="browseall">All designs &gt;</a></p>
 
             {data.hoodies.map((product) => (
+                <Product key={product._id} product={product}></Product>
+            ))}
+
+        <p className='featuredtext'><span className="productstitle">Featured Phone Cases</span>
+        <a href={`/category/cases`} className="browseall">All designs &gt;</a></p>
+
+            {data.cases.map((product) => (
+                <Product key={product._id} product={product}></Product>
+            ))}
+
+        <p className='featuredtext'><span className="productstitle">Featured Pins</span>
+        <a href={`/category/stickers`} className="browseall">All designs &gt;</a></p>
+
+            {data.pins.map((product) => (
+                <Product key={product._id} product={product}></Product>
+            ))}
+
+        <p className='featuredtext'><span className="productstitle">Featured Posters</span>
+        <a href={`/category/posters`} className="browseall">All designs &gt;</a></p>
+
+            {data.posters.map((product) => (
+                <Product key={product._id} product={product}></Product>
+            ))}
+
+        <p className='featuredtext'><span className="productstitle">Featured Mugs</span>
+        <a href={`/category/mugs`} className="browseall">All designs &gt;</a></p>
+
+            {data.mugs.map((product) => (
                 <Product key={product._id} product={product}></Product>
             ))}
         </table>
