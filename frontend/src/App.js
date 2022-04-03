@@ -1,9 +1,6 @@
 import react from 'react';
 import {BrowserRouter, Switch, Route, Routes} from 'react-router-dom';
-import switchSlide from './slideshow';
-import './slideshow';
 import './search';
-import Slideshow from './slides';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 
