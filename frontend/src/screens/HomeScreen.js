@@ -28,49 +28,45 @@ export default function HomeScreen() {
 
         <span className="productstitle">Featured T-Shirts</span>
         <a href={`/category/tshirts`} className="browseall">All designs &gt;</a>
-        <BrowserRouter>
 
-        <Switch>
-          <Route path="/product/:category" component={TshirtsScreen}></Route>
-        </Switch>
-        </BrowserRouter>
 
         <table className="maintable">
-            {data.tshirts.map((product) => (
+            {data.tshirts.slice(0, 6).map((product) => (
                 <Product key={product._id} product={product}></Product>
             ))}
+            
         <p className='featuredtext'><span className="productstitle">Featured Hoodies</span>
         <a href={`/category/hoodies`} className="browseall">All designs &gt;</a></p>
 
-            {data.hoodies.map((product) => (
+            {data.hoodies.slice(0, 6).map((product) => (
                 <Product key={product._id} product={product}></Product>
             ))}
 
         <p className='featuredtext'><span className="productstitle">Featured Phone Cases</span>
         <a href={`/category/cases`} className="browseall">All designs &gt;</a></p>
 
-            {data.cases.map((product) => (
+            {data.cases.slice(0, 6).map((product) => (
                 <Product key={product._id} product={product}></Product>
             ))}
 
         <p className='featuredtext'><span className="productstitle">Featured Pins</span>
         <a href={`/category/stickers`} className="browseall">All designs &gt;</a></p>
 
-            {data.pins.map((product) => (
+            {data.pins.slice(0, 6).map((product) => (
                 <Product key={product._id} product={product}></Product>
             ))}
 
         <p className='featuredtext'><span className="productstitle">Featured Posters</span>
         <a href={`/category/posters`} className="browseall">All designs &gt;</a></p>
 
-            {data.posters.map((product) => (
+            {data.posters.slice(0, 6).map((product) => (
                 <Product key={product._id} product={product}></Product>
             ))}
 
         <p className='featuredtext'><span className="productstitle">Featured Mugs</span>
         <a href={`/category/mugs`} className="browseall">All designs &gt;</a></p>
 
-            {data.mugs.map((product) => (
+            {data.mugs.slice(0, 6).map((product) => (
                 <Product key={product._id} product={product}></Product>
             ))}
         </table>
