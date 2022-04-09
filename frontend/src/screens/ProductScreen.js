@@ -1,5 +1,7 @@
 import React from 'react';
 import data from '../data';
+import Product from '../components/Product';
+
 
 
 export default function ProductScreen(props) {
@@ -43,6 +45,27 @@ if(!hoodie && !cases && !pin && !poster && !mug){
     <button className='add-to-cart' tabindex="3">Add to cart</button>
     </div>
   </div>
+
+        <section className="products">
+        <span className="productstitle">More Featured Designs</span>
+        <a href={`/category/tshirts`} className="browseall">All designs &gt;</a>
+
+          <table className="maintable">
+              {data.tshirts.slice(3, 6).map((product) => (
+                  <Product key={product._id} product={product}></Product>
+              ))}
+              {data.hoodies.slice(4, 6).map((product) => (
+                  <Product key={product._id} product={product}></Product>
+              ))}
+              {data.pins.slice(4, 6).map((product) => (
+                  <Product key={product._id} product={product}></Product>
+              ))}
+              {data.posters.slice(3, 4).map((product) => (
+                  <Product key={product._id} product={product}></Product>
+              ))}
+          </table>
+        </section>
+
   </>
   
   ) 
