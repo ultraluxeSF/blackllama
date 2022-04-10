@@ -28,7 +28,7 @@ if(!hoodie && !cases && !pin && !poster && !mug){
       <p className='prodcategory'>{tshirt.category}</p>
       <p className='prodspectitle'><span className="designerspan">Designer: </span><a href={`/user/${tshirt.designer}`} className="proddesigner">{tshirt.designer}</a></p>
 
-      <p className='prodspectitle'>Available sizes:</p>
+      <p className='prodspectitle'>Sizes:</p>
       <div className='sizes-container'>
         <div className='size-tangle1' tabindex="2">S</div>
         <div className='size-tangle' tabindex="2">M</div>
@@ -41,11 +41,26 @@ if(!hoodie && !cases && !pin && !poster && !mug){
         <div className='size-tangle' tabindex="2">4XL</div>
         <div className='size-tangle' tabindex="2">5XL</div>
       </div>
+      {/* Stock check */}
+      <p className='prodspectitle'>Availability: {tshirt.countInStock > 0 ?
+        (<span className='instock'>In Stock</span>) : 
+        (<span className='outofstock'>Out of Stock</span>)}
+        {tshirt.countInStock > 0 ?
+          (<span className='stockcount'>{tshirt.countInStock}<span className='availabletext'> in stock</span></span>) : 
+          (<></>)}
+      </p>
+        
+
+
+      {/* Stock check end */}
       <p className='discountedprodprice'>${(tshirt.price*.75).toFixed(2)}<sup className='discountamount'>25% OFF</sup><span className='prodprice'> ${tshirt.price}</span></p>
-    <button className='add-to-cart' tabindex="3">Add to cart</button>
+    {tshirt.countInStock > 0 ? (<button className='add-to-cart' tabindex="3">Add to cart</button>) : (<button className='add-to-cart-outofstock' tabindex="3">Add to cart</button>)}
+    {tshirt.countInStock > 0 ? (<></>):
+    (<p className='checkotherstext'>
+      Hey! Seems this product is out of stock. But don't worry, we have other <a href="/category/tshirts" className='coolstufflink'>cool stuff</a> to check out!</p>)}
     </div>
   </div>
-
+{/* FEATURED PRODUCTS BELOW V */}
         <section className="products">
         <span className="productstitle">More Featured Designs</span>
         <a href={`/category/tshirts`} className="browseall">All designs &gt;</a>

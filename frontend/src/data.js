@@ -8,6 +8,7 @@ const data = {
             price:12.99,
             designer:'mistergongs',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'2',
@@ -16,7 +17,8 @@ const data = {
             image:'https://res.cloudinary.com/teepublic/image/private/s--fdI7fd6k--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_409/c_crop,g_north_west,h_626,w_470,x_-31,y_-26/g_north_west,u_upload:v1571669491:production:blanks:wrrzmmnvfbf1nk8hcfhh,x_-426,y_-351/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1596269139/production/designs/12694562_0.jpg',
             price:9.99,
             designer:'Ultraluxe',
-            description:'TestDescription sds',
+            description:'TestDescription',
+countInStock: 0,
         },
         {
             _id:'3',
@@ -25,7 +27,8 @@ const data = {
             image:'https://res.cloudinary.com/teepublic/image/private/s--uTQUIDO4--/t_Resized%20Artwork/c_crop,x_10,y_10/c_fit,w_470/c_crop,g_north_west,h_626,w_470,x_0,y_0/g_north_west,u_upload:v1462829015:production:blanks:mtl53ofohwq5goqjo9ke,x_-395,y_-325/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1636430789/production/designs/25444384_0.jpg',
             price:10.99,
             designer:'Vanessa Stockard',
-            description:'TestDescription42',
+            description:'TestDescription',
+countInStock: 12,
         },
         {
             _id:'4',
@@ -35,6 +38,7 @@ const data = {
             price:9.99,
             designer:'Hazeman',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'5',
@@ -44,6 +48,7 @@ const data = {
             price:10.99,
             designer:'DankFutura',
             description:'TestDescription',
+countInStock: 10,
         },
         
     ],
@@ -56,6 +61,7 @@ const data = {
             price:13.99,
             designer:'Killskerry',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'7',
@@ -65,6 +71,7 @@ const data = {
             price:14.99,
             designer:'Guyvit',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'8',
@@ -74,6 +81,7 @@ const data = {
             price:14.99,
             designer:'DrMonekers',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'9',
@@ -83,6 +91,7 @@ const data = {
             price:13.99,
             designer:'Maintenance Phase',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'10',
@@ -92,6 +101,7 @@ const data = {
             price:15.99,
             designer:'Liamlefr',
             description:'TestDescription',
+countInStock: 10,
         },
     ],
     cases: [
@@ -103,6 +113,7 @@ const data = {
             price:9.99,
             designer:'xavierjfong',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'12',
@@ -112,6 +123,7 @@ const data = {
             price:9.99,
             designer:'Slanapotam',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'13',
@@ -121,6 +133,7 @@ const data = {
             price:8.99,
             designer:'FandomizedRose',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'14',
@@ -130,6 +143,7 @@ const data = {
             price:9.99,
             designer:'Zaawely',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'15',
@@ -139,6 +153,7 @@ const data = {
             price:8.99,
             designer:'KamyShek89',
             description:'TestDescription',
+countInStock: 10,
         },
     ],
     pins: [
@@ -150,6 +165,7 @@ const data = {
             price:0.99,
             designer:'Ultraluxe',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'17',
@@ -159,6 +175,7 @@ const data = {
             price:0.99,
             designer:'DraconicVerses',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'18',
@@ -168,6 +185,7 @@ const data = {
             price:0.99,
             designer:'Saytee1',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'19',
@@ -177,6 +195,7 @@ const data = {
             price:0.99,
             designer:'CTShirts',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'20',
@@ -186,6 +205,7 @@ const data = {
             price:0.99,
             designer:'sifis',
             description:'TestDescription',
+countInStock: 10,
         },
     ],
     posters: [
@@ -197,6 +217,7 @@ const data = {
             price:9.99,
             designer:'Fanthropy Running Programs',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'22',
@@ -206,6 +227,7 @@ const data = {
             price:10.99,
             designer:'Durkinworks',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'23',
@@ -215,6 +237,7 @@ const data = {
             price:10.99,
             designer:'drawmelike',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'24',
@@ -224,6 +247,7 @@ const data = {
             price:11.99,
             designer:'ungfio',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'25',
@@ -233,6 +257,7 @@ const data = {
             price:11.99,
             designer:'Ratscape',
             description:'TestDescription',
+countInStock: 10,
         },
     ],
     mugs: [
@@ -244,6 +269,7 @@ const data = {
             price:10.99,
             designer:'Ryalgi',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'27',
@@ -253,6 +279,7 @@ const data = {
             price:9.99,
             designer:'mistergongs',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'28',
@@ -262,6 +289,7 @@ const data = {
             price:8.99,
             designer:'Geekaholic',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'29',
@@ -271,6 +299,7 @@ const data = {
             price:10.99,
             designer:'Ellador',
             description:'TestDescription',
+countInStock: 10,
         },
         {
             _id:'30',
@@ -280,6 +309,7 @@ const data = {
             price:10.99,
             designer:'Diannas',
             description:'TestDescription',
+countInStock: 10,
         },
     ],
     
