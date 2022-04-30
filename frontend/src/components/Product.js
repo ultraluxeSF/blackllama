@@ -1,4 +1,8 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import axios from 'axios';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
+
 
 export default function Product(props) {
     const {product} = props;

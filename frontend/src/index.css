@@ -642,3 +642,15 @@ tr {
   font-weight: 400;
   color: #000;
 }
+.alert {
+  padding: 5px;
+  border: 1px solid transparent;
+}
+.alert-info{
+  color: #fff;
+  background-color: #6949FF;
+}
+.alert-danger{
+  color: #fff;
+  background-color: #cc1818;
+}

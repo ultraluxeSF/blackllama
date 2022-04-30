@@ -1,5 +1,30 @@
 {
   "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3",
     "react-slideshow-image": "^3.7.0"
+  },
+  "name": "bisp_7450",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ultraluxeSF/blackllama.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ultraluxeSF/blackllama/issues"
+  },
+  "homepage": "https://github.com/ultraluxeSF/blackllama#readme",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-plugin-react": "^7.29.4",
+    "nodemon": "^2.0.15"
   }
 }
