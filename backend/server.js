@@ -5,29 +5,26 @@ import data from "./data.js";
 
 const app = express();
 
+
 //import products
-app.get('/api/tshirts', (req, res) => {
-    res.send(data.tshirts);
+app.get('/api/products', (req, res) => {
+    res.send(data.products);
 })
-app.get('/api/hoodies', (req, res) => {
-    res.send(data.hoodies);
+
+
+app.get('/api/products/:id', (req, res) => {
+    const tshirt = data.products.find((x) => x._id === req.params.id);
+    if (tshirt) {
+        res.send(tshirt);
+    } else {
+        res.status(404).send({ message: 'Product Not Found :(' });
+    }
 })
-app.get('/api/cases', (req, res) => {
-    res.send(data.cases);
-})
-app.get('/api/pins', (req, res) => {
-    res.send(data.pins);
-})
-app.get('/api/posters', (req, res) => {
-    res.send(data.posters);
-})
-app.get('/api/mugs', (req, res) => {
-    res.send(data.mugs);
-})
+
 
 
 //respond message
-app.get('/', (req, res)=> { //handler
+app.get('/', (req, res) => { //handler
     res.send('Server is ready');
 });
 

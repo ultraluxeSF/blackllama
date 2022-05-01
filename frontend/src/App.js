@@ -1,5 +1,5 @@
-import react from 'react';
-import { BrowserRouter, Switch, Route, Routes } from 'react-router-dom';
+//import react from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './search';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
@@ -25,9 +25,18 @@ function App() {
           </ul>
         </div>
       </nav>
+      <section className="sec1">
+        <a href="#" className='catlinks'>All Designs</a>
+        <a href="#" className='catlinks'>T-Shirts</a>
+        <a href="#" className='catlinks'>Hoodies</a>
+        <a href="#" className='catlinks'>Phone Cases</a>
+        <a href="#" className='catlinks'>Stickers</a>
+        <a href="#" className='catlinks'>Posters</a>
+        <a href="#" className='catlinks'>Home Goods</a>
+      </section>
       <Switch>
         <Route exact path="/" component={HomeScreen}></Route>
-        <Route path="/product/:name" component={ProductScreen}></Route>
+        <Route path="/product/:id" component={ProductScreen}></Route>
       </Switch>
     </BrowserRouter>
   );
