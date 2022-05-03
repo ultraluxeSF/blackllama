@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
-//import data from '../data';
 import Product from '../components/Product';
-//import axios from 'axios';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,15 +8,6 @@ import { listProducts } from '../actions/productActions';
 
 export default function HomeScreen() {
     //hook states
-    // const [tshirts, setTshirts] = useState([]);
-    // const [hoodies, setHoodies] = useState([]);
-    // const [cases, setCases] = useState([]);
-    // const [pins, setPins] = useState([]);
-    // const [posters, setPosters] = useState([]);
-    // const [mugs, setMugs] = useState([]);
-
-    // const [loading, setLoading] = useState(false);
-    // const [error, setError] = useState(false);
     const dispatch = useDispatch();
     const productList = useSelector(state => state.productList)
     const { loading, error, product } = productList;

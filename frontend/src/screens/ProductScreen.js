@@ -1,29 +1,28 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Product from '../components/Product';
 import { useDispatch, useSelector } from 'react-redux';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { detailsProduct } from '../actions/productActions';
+//import { useState } from 'react/cjs/react.production.min';
 
 
 
 export default function ProductScreen(props) {
   const dispatch = useDispatch();
   const productId = props.match.params.id;
+  const [qty, setQty] = useState(1)
   const productDetails = useSelector(state => state.productDetails);
   const { loading, error, product } = productDetails;
   useEffect(() => {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
 
-  //Return T-Shirt info
-  // if(tshirts){
-  // if (!hoodies && !casess && !pins && !posters && !mugs) {
-  //   return (
+  const addToCartHandler = () => {
+    props.history.push(`/cart/${productId}?qty=${qty}`);
+  }
+
   return (
-
-
-
     <div>
       {loading ? (
         <LoadingBox></LoadingBox>
@@ -63,7 +62,21 @@ export default function ProductScreen(props) {
               </p>
 
               <p className='discountedprodprice'>${(product.price * .75).toFixed(2)}<sup className='discountamount'>25% OFF</sup><span className='prodprice'> ${product.price}</span></p>
-              {product.countInStock > 0 ? (<button className='add-to-cart' tabindex="3">Add to cart</button>) : (<button className='add-to-cart-outofstock' tabindex="3">Add to cart</button>)}
+              {product.countInStock > 0 ? (
+                <>
+                  <li>
+                    <div className='row'>
+                      <div className='selqty'>Select Quantity <select value={qty} onChange={e => setQty(e.target.value)}>
+                        {
+                          [...Array(product.countInStock).keys()].map(x => (
+                            <option key={x + 1} value={x + 1}>{x + 1}</option>
+                          ))
+                        }
+                      </select></div>
+                    </div>
+                  </li>
+                  <button onClick={addToCartHandler} className='add-to-cart' tabindex="3">Add to cart</button>
+                </>) : (<button className='add-to-cart-outofstock' tabindex="3">Add to cart</button>)}
               {product.countInStock > 0 ? (<></>) :
                 (<p className='checkotherstext'>
                   Hey! Seems this product is out of stock. But don't worry, we have other <a href={`/category/${product.category}`} className='coolstufflink'>cool stuff</a> to check out!</p>)}

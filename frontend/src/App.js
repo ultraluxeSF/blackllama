@@ -1,16 +1,22 @@
 //import react from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './search';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import CartScreen from './screens/CartScreen';
+import { useSelector } from 'react-redux';
 
 
 function App() {
+
+  const cart = useSelector(state => state.cart);
+  const { cartItems } = cart;
+
   return (
     <BrowserRouter>
       <nav>
         <div className="navleft">
-          <a href="/" className="logo"></a>
+          <Link to="/" className="logo"></Link>
           <form className="search-container" >
             <input id="search-box" type="text" className="search-box" name="q" />
             <label for="search-box">Search here..<span className="search-icon"></span></label>
@@ -19,24 +25,32 @@ function App() {
         </div>
         <div className="navright">
           <ul className="navbtns">
-            <li><a href="/favorites">Favorites<span className="heart"></span></a></li>
-            <li><a href="/cart">Cart<span className="cart"></span></a></li>
-            <li><a href="/myprofile">INorkulov<span className="avatar"></span></a></li>
+            <li><Link to="/favorites">Favorites<span className="heart"></span></Link></li>
+            <li><Link to="/cart">Cart
+              {
+                cartItems.length > 0 && (
+                  <span className='badge'>{cartItems.length}</span>
+                )
+              }
+              <span className="cart"></span></Link></li>
+            <li><Link to="/myprofile">INorkulov<span className="avatar"></span></Link></li>
           </ul>
         </div>
       </nav>
       <section className="sec1">
-        <a href="#" className='catlinks'>All Designs</a>
-        <a href="#" className='catlinks'>T-Shirts</a>
-        <a href="#" className='catlinks'>Hoodies</a>
-        <a href="#" className='catlinks'>Phone Cases</a>
-        <a href="#" className='catlinks'>Stickers</a>
-        <a href="#" className='catlinks'>Posters</a>
-        <a href="#" className='catlinks'>Home Goods</a>
+        <Link to="#" className='catlinks'>All Designs</Link>
+        <Link to="#" className='catlinks'>T-Shirts</Link>
+        <Link to="#" className='catlinks'>Hoodies</Link>
+        <Link to="#" className='catlinks'>Phone Cases</Link>
+        <Link to="#" className='catlinks'>Stickers</Link>
+        <Link to="#" className='catlinks'>Posters</Link>
+        <Link to="#" className='catlinks'>Home Goods</Link>
       </section>
       <Switch>
         <Route exact path="/" component={HomeScreen}></Route>
         <Route path="/product/:id" component={ProductScreen}></Route>
+        <Route path="/cart/:id" component={CartScreen}></Route>
+
       </Switch>
     </BrowserRouter>
   );
