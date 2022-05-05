@@ -138,10 +138,17 @@ nav {
   display: flex;
 }
 
-.navbtns li {
-  margin-left: 80px;
+.cartnavbtn {
+  margin-left: 65px !important;
   list-style: none;
 }
+
+.navbtns li {
+  margin-left: 100px;
+  list-style: none;
+}
+
+
 
 .navbtns li a {
   text-decoration: none;
@@ -365,16 +372,19 @@ nav {
   width: 250px;
   height: 250px;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 td {
   width: 300px;
-  height: 370px;
+  height: 380px;
   /* border-bottom: 5px solid #aaaaaa; */
   transition: 0.5s;
   margin-left: 15px;
   box-shadow: 0 5px 35px 5px rgb(0 0 0 / 0.05);
   border-radius: 15px;
+  padding-top: 25px;
+  background-color: #fff;
 }
 
 td:hover {
@@ -390,10 +400,11 @@ td:hover {
   text-align: left;
   font-size: 12pt;
   font-weight: 400;
-  padding-left: 20px;
+  padding-left: 25px;
   padding-top: 10px;
+  padding-right: 15px;
   height: 30px;
-  margin-top: -5px;
+  margin-top: 0px;
   color: #1b1b1d;
   /* background-color: #77b900; */
   /* overflow: hidden; */
@@ -404,10 +415,20 @@ td:hover {
   font-size: 14pt;
   font-weight: 700;
   float: left;
-  padding-left: 20px;
+  padding-left: 25px;
   margin-top: 18px;
   transition: color 0.5s;
   color: #6949FF;
+}
+
+.priceDisc {
+  font-size: 14pt;
+  font-weight: 700;
+  float: left;
+  padding-left: 25px;
+  margin-top: 18px;
+  transition: color 0.5s;
+  color: #ccc;
 }
 
 table {
@@ -427,7 +448,7 @@ tr {
   text-align: left;
   margin-top: 50px;
   padding-bottom: 10px;
-  padding-left: 20px;
+  padding-left: 25px;
   position: absolute;
   font-weight: 400;
   font-size: 10pt;
@@ -734,8 +755,26 @@ tr {
 }
 
 .alert-info {
+  color: #000;
+  font-size: 12pt;
+  font-weight: 700;
+  /* background-color: #fff; */
+}
+
+.emptycartLink {
+  text-decoration: none;
   color: #fff;
   background-color: #6949FF;
+  padding: 8px 14px;
+  margin-left: 12px;
+  border-radius: 7px;
+  font-size: 11pt;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+
+.emptycartLink:hover {
+  background-color: #4f35c2;
 }
 
 .alert-danger {
@@ -879,7 +918,7 @@ textarea {
   background-color: #fff;
   cursor: pointer;
   border: 1px solid #C7CBD1;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 10pt;
   margin-left: 10px;
   padding-top: 6px;
@@ -906,4 +945,191 @@ select:focus {
 
   transition: all 0.5s;
 
+}
+
+/* CART */
+.cartImg {
+  width: 180px;
+  height: 180px;
+  border-radius: 15px;
+  /* box-shadow: 0 15px 45px 5px rgb(0 0 0 / 0.05); */
+  /* border: 1px solid #1b1b1d; */
+}
+
+.row {
+  display: inline-flex;
+  border-radius: 15px;
+  box-shadow: 0 15px 45px 5px rgb(0 0 0 / 0.05);
+  width: 100%;
+  margin-top: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  transition: all 0.5s;
+
+  background-color: #fff;
+}
+
+.removeBtnArea {
+  border-radius: 15px;
+  width: 30%;
+  transition: all 0.5s;
+  margin-right: 50px;
+  /* margin-left: -400px; */
+  /* background-color: #000; */
+  text-align: right;
+  float: right;
+}
+
+.cartCard {
+  border-radius: 10px;
+  box-shadow: 0 15px 45px 5px #0000000d;
+
+}
+
+.inlinerow {
+  width: 70%;
+  display: inline-flex;
+}
+
+.cartProdLink {
+  text-decoration: none;
+  font-weight: 800;
+  color: #000;
+  font-size: 16pt;
+  transition: all 0.5s;
+}
+
+.cartProdName {
+  margin-top: 10px;
+}
+
+.cartselectqty {
+  margin-top: 35px;
+  margin-left: -10px;
+}
+
+.col2 {
+  margin-left: 50px;
+
+}
+
+.cartItemPrice {
+  margin-top: 35px;
+  font-weight: 700;
+  font-size: 14pt;
+}
+
+.removeBtn {
+  border: none;
+  border: 1px solid #cc1818;
+  color: #cc1818;
+  padding: 6px 18px;
+  border-radius: 5px;
+  /* width: 80px; */
+  margin-top: 25px;
+  transition: all 0.5s;
+  font-size: 9pt;
+  font-weight: 600;
+  float: right;
+  right: 0;
+  /* margin-left: 500px; */
+  /* text-align: right; */
+  position: relative;
+  background-color: #fff;
+
+}
+
+.row:hover {
+  box-shadow: 0 15px 45px 5px rgb(0 0 0 / 0.1);
+}
+
+.cartProdLink:hover {
+  color: #6949FF;
+}
+
+.removeBtn:hover {
+  background-color: #cc1818;
+  cursor: pointer;
+  color: #fff
+}
+
+.cart-listproducts {
+  width: 1700px;
+  box-sizing: border-box;
+  /* background: #1b1b1d; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  display: flex;
+}
+
+.col-1 {
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 40px; */
+  /* background-color: #555; */
+}
+
+.col-2 {
+  width: 550px;
+  height: 250px;
+  margin-left: 50px;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-top: 25px;
+  padding-right: 40px;
+  margin-top: 85px;
+}
+
+.yourcart {
+  font-weight: 900;
+  font-size: 18pt;
+  /* margin-top: 20px; */
+}
+
+.carttotalPriceTitle {
+  font-weight: 600;
+  font-size: 12pt;
+  margin-top: 30px;
+}
+
+.carttotalPrice {
+  font-weight: 800;
+  font-size: 12pt;
+  color: #6949FF
+}
+
+.carttotalItems {
+  font-weight: 600;
+  font-size: 12pt;
+  margin-top: -5px;
+}
+
+.checkoutbtn {
+  border: none;
+  border-radius: 8px;
+  background-color: #6949FF;
+  color: #fff;
+  padding: 15px;
+  font-size: 10pt;
+  font-weight: 700;
+  margin-top: 20px;
+  width: 100%;
+  transition: all 0.5s;
+
+}
+
+.checkoutbtn:hover {
+  cursor: pointer;
+  background-color: #4f35c2;
+
+}
+
+.checkoutbtn:disabled {
+  background-color: #ccc;
+  cursor: default;
 }

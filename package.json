@@ -2,6 +2,7 @@
   "dependencies": {
     "axios": "^0.26.1",
     "express": "^4.17.3",
+    "mongoose": "^6.3.2",
     "react-slideshow-image": "^3.7.0"
   },
   "name": "bisp_7450",

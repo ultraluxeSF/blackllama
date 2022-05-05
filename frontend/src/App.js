@@ -25,8 +25,8 @@ function App() {
         </div>
         <div className="navright">
           <ul className="navbtns">
-            <li><Link to="/favorites">Favorites<span className="heart"></span></Link></li>
-            <li><Link to="/cart">Cart
+            <li ><Link to="/favorites">Favorites<span className="heart"></span></Link></li>
+            <li className='cartnavbtn'><Link to="/cart/">Cart
               {
                 cartItems.length > 0 && (
                   <span className='badge'>{cartItems.length}</span>
@@ -49,7 +49,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomeScreen}></Route>
         <Route path="/product/:id" component={ProductScreen}></Route>
-        <Route path="/cart/:id" component={CartScreen}></Route>
+        <Route path="/cart/:id?" component={CartScreen}></Route>
 
       </Switch>
     </BrowserRouter>

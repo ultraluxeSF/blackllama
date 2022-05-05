@@ -65,7 +65,7 @@ export default function ProductScreen(props) {
               {product.countInStock > 0 ? (
                 <>
                   <li>
-                    <div className='row'>
+                    <div className=''>
                       <div className='selqty'>Select Quantity <select value={qty} onChange={e => setQty(e.target.value)}>
                         {
                           [...Array(product.countInStock).keys()].map(x => (
