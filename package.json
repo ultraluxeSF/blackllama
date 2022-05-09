@@ -1,7 +1,10 @@
 {
   "dependencies": {
     "axios": "^0.26.1",
+    "bcryptjs": "^2.4.3",
+    "config": "3.3.1",
     "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
     "mongoose": "^6.3.2",
     "react-slideshow-image": "^3.7.0"
   },

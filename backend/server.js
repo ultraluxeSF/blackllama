@@ -1,9 +1,14 @@
 //Express server
 import express from "express";
-
+//import mongoose from "mongoose";
 import data from "./data.js";
+//import userRouter from "./routers/userRouter.js";
 
 const app = express();
+// mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/blackllama', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+// })
 
 
 //import products
@@ -11,6 +16,10 @@ app.get('/api/products', (req, res) => {
     res.send(data.products);
 })
 
+app.get('/api/users', (req, res) => {
+    res.send(data.users);
+})
+//app.use('/api/users', userRouter)
 
 app.get('/api/products/:id', (req, res) => {
     const tshirt = data.products.find((x) => x._id === req.params.id);
@@ -27,6 +36,10 @@ app.get('/api/products/:id', (req, res) => {
 app.get('/', (req, res) => { //handler
     res.send('Server is ready');
 });
+
+app.use((err, req, res, next) => {
+    res.status(500).send({ message: err.message });
+})
 
 const port = process.env.PORT || 5000;
 
