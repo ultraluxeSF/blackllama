@@ -34,7 +34,7 @@ const data = {
             price: 9.99,
             designer: 'Ultraluxe',
             description: 'TestDescription',
-            countInStock: 1,
+            countInStock: 0,
         },
         {
             _id: '3',

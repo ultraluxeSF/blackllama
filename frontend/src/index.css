@@ -1,10 +1,11 @@
 body {
-  background-color: #efefef;
+  background-color: #fff;
   width: 100%;
   margin: 0;
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #3D4B67;
 }
 
 #root {
@@ -43,7 +44,7 @@ nav {
 .search-box {
   transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
   width: 250px;
-  height: 30px;
+  height: 22px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
@@ -69,7 +70,7 @@ nav {
   width: 400px;
   border-radius: auto;
   background: #efefef;
-  color: #000000;
+  color: #3D4B67;
 }
 
 .search-box+label .search-icon {
@@ -103,7 +104,7 @@ nav {
 }
 
 .search-container label {
-  left: -215px;
+  left: -250px;
   position: relative;
   font-size: 10pt;
   color: #8C95A4;
@@ -452,18 +453,18 @@ tr {
   position: absolute;
   font-weight: 400;
   font-size: 10pt;
-  color: #000000;
+  color: #3D4B67;
 }
 
 .designerspan {
-  color: #000000;
+  color: #3D4B67;
   font-weight: 600;
 
 }
 
 .designer {
   font-weight: 400;
-  color: #000000;
+  color: #3D4B67;
   transition: .2s;
 }
 
@@ -577,12 +578,12 @@ tr {
 }
 
 .prodspectitle {
-  color: #000000;
+  color: #3D4B67;
   font-weight: 600;
 }
 
 .proddesigner {
-  color: #000000;
+  color: #3D4B67;
   font-weight: 400;
   text-decoration: none;
   transition: all 0.2s;
@@ -746,7 +747,7 @@ tr {
 
 .availabletext {
   font-weight: 400;
-  color: #000;
+  color: #3D4B67;
 }
 
 .alert {
@@ -755,7 +756,7 @@ tr {
 }
 
 .alert-info {
-  color: #000;
+  color: #3D4B67;
   font-size: 12pt;
   font-weight: 700;
   /* background-color: #fff; */
@@ -941,7 +942,7 @@ select:hover {
 
 select:focus {
   border: 1px solid #6949FF;
-  color: #000;
+  color: #3D4B67;
 
   transition: all 0.5s;
 
@@ -976,7 +977,7 @@ select:focus {
   transition: all 0.5s;
   margin-right: 50px;
   /* margin-left: -400px; */
-  /* background-color: #000; */
+  /* background-color: #3D4B67; */
   text-align: right;
   float: right;
 }
@@ -995,7 +996,7 @@ select:focus {
 .cartProdLink {
   text-decoration: none;
   font-weight: 800;
-  color: #000;
+  color: #3D4B67;
   font-size: 16pt;
   transition: all 0.5s;
 }
@@ -1132,4 +1133,196 @@ select:focus {
 .checkoutbtn:disabled {
   background-color: #ccc;
   cursor: default;
+}
+
+/* PAYMENT DETAILS SCREEN */
+
+.paymentDetails {
+  display: flex;
+  width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.summaryOrderSec {
+  width: 810px;
+}
+
+.summaryOrderSecBox {
+  width: 810px;
+  box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  border-radius: 15px;
+  height: 500px;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+
+.paymentDetailsSec {
+  width: 810px;
+  margin-left: 80px;
+}
+
+.paymentsDetailsSecBox {
+  width: 810px;
+  background: #F5F7FB;
+  border-radius: 15px;
+  box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.02);
+  padding-top: 20px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+input {
+  width: 700px;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 7px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: block;
+  margin-top: -8px;
+}
+
+input::placeholder {
+  color: #ccc;
+  font-family: 'Inter';
+  font-weight: 300;
+  font-size: 13px;
+  /* line-height: 20px; */
+}
+
+input::before {
+  content: "3232";
+}
+
+input:hover {
+  cursor: text;
+}
+
+.address-input {
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.city-input {
+  width: 350px;
+  margin-left: 55px;
+  justify-content: left;
+  margin-top: 0px;
+  background: #FFFFFF;
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #CCCCCC;
+  border-radius: 0px 0px 0px 7px;
+  z-index: 10;
+}
+
+.postal-input {
+  width: 350px;
+  margin-left: -55px;
+  justify-content: left;
+  margin-top: 0px;
+  background: #FFFFFF;
+  border-width: 0px 1px 1px 0px;
+  border-style: solid;
+  border-color: #CCCCCC;
+  border-radius: 0px 0px 7px 0px;
+}
+
+.city-postal-div {
+  display: flex;
+}
+
+.card-details-div {
+  display: flex;
+  padding: 0;
+}
+
+.cardNo-input {
+  width: 500px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 7px 0px 0px 7px;
+  margin-left: 55px;
+  z-index: 10;
+}
+
+.cardMMYY-input {
+  width: 125px;
+  background: #FFFFFF;
+  border-width: 1px 1px;
+  border-style: solid;
+  border-color: #CCCCCC;
+  border-radius: 0;
+  margin-left: -60px;
+  text-align: center;
+
+}
+
+.cardCVC-input {
+  width: 100px;
+  margin-left: -80px;
+  text-align: center;
+
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 0px 7px 7px 0px;
+}
+
+.input-title {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #3D4B67;
+  margin-left: 55px;
+  margin-top: 20px;
+}
+
+.pd-title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 30px;
+  color: #3D4B67;
+}
+
+.misc-info {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #8C95A4;
+  margin-top: -5px;
+}
+
+.proceed-to-payment-btn {
+  width: 700px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  background: #6949FF;
+  border-radius: 7px;
+  margin-top: 30px;
+  border: none;
+  transition: all 0.5s;
+}
+
+.proceed-to-payment-btn:hover {
+  cursor: pointer;
+  background: #4f35c2;
 }

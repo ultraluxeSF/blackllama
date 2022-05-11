@@ -5,6 +5,7 @@ import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
 import { useSelector } from 'react-redux';
+import CheckoutScreen from './screens/CheckoutScreen';
 
 
 function App() {
@@ -32,24 +33,17 @@ function App() {
                   <span className='badge'>{cartItems.length}</span>
                 )
               }
-              <span className="cart"></span></Link></li>
+              <span className="cart" id='cartbtn'></span></Link></li>
             <li><Link to="/myprofile">INorkulov<span className="avatar"></span></Link></li>
           </ul>
         </div>
       </nav>
-      <section className="sec1">
-        <Link to="#" className='catlinks'>All Designs</Link>
-        <Link to="#" className='catlinks'>T-Shirts</Link>
-        <Link to="#" className='catlinks'>Hoodies</Link>
-        <Link to="#" className='catlinks'>Phone Cases</Link>
-        <Link to="#" className='catlinks'>Stickers</Link>
-        <Link to="#" className='catlinks'>Posters</Link>
-        <Link to="#" className='catlinks'>Home Goods</Link>
-      </section>
       <Switch>
         <Route exact path="/" component={HomeScreen}></Route>
         <Route path="/product/:id" component={ProductScreen}></Route>
         <Route path="/cart/:id?" component={CartScreen}></Route>
+        <Route path="/checkout/:id?" component={CheckoutScreen}></Route>
+
 
       </Switch>
     </BrowserRouter>

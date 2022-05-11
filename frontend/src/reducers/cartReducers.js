@@ -1,4 +1,4 @@
-import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
+import { CART_ADD_ITEM, CART_REMOVE_ITEM, CART_SAVE_PAYMENT_DETAILS } from "../constants/cartConstants";
 
 export const cartReducer = (state = { cartItems: [] }, action) => {
     switch (action.type) {
@@ -21,6 +21,10 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
             return {
                 ...state, cartItems: state.cartItems.filter(x => x.product !== action.payload)
                 //filtering out the product which id is equal to action.payload
+            }
+        case CART_SAVE_PAYMENT_DETAILS:
+            return {
+                ...state, paymentDetails: action.payload //action payload contains data that we set in savePaymentDetails action and the data comes from CheckoutScreen
             }
         default:
             return state;

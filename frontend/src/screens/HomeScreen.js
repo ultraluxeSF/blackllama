@@ -4,6 +4,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
+import { Link } from 'react-router-dom';
 
 
 export default function HomeScreen() {
@@ -24,6 +25,16 @@ export default function HomeScreen() {
                 <MessageBox variant="danger">{error}</MessageBox>
             ) : (
                 <>
+                    <section className="sec1">
+                        <Link to="#" className='catlinks'>All Designs</Link>
+                        <Link to="#" className='catlinks'>T-Shirts</Link>
+                        <Link to="#" className='catlinks'>Hoodies</Link>
+                        <Link to="#" className='catlinks'>Phone Cases</Link>
+                        <Link to="#" className='catlinks'>Stickers</Link>
+                        <Link to="#" className='catlinks'>Posters</Link>
+                        <Link to="#" className='catlinks'>Home Goods</Link>
+                    </section>
+
                     <section id="banner">
                         <div className="banner-container">
                             <figure className="slide">

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import { detailsProduct } from '../actions/productActions';
+import { Link } from 'react-router-dom';
 //import { useState } from 'react/cjs/react.production.min';
 
 
@@ -30,6 +31,16 @@ export default function ProductScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <>
+          <section className="sec1">
+            <Link to="#" className='catlinks'>All Designs</Link>
+            <Link to="#" className='catlinks'>T-Shirts</Link>
+            <Link to="#" className='catlinks'>Hoodies</Link>
+            <Link to="#" className='catlinks'>Phone Cases</Link>
+            <Link to="#" className='catlinks'>Stickers</Link>
+            <Link to="#" className='catlinks'>Posters</Link>
+            <Link to="#" className='catlinks'>Home Goods</Link>
+          </section>
+
           <div className='productpageinfocontainer'>
             <div className='leftside'>
               <img className='largeimg' src={product.image} alt={product.name} ></img>
